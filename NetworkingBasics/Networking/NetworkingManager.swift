@@ -16,20 +16,20 @@ enum NetworkingManager {
                           method: .get,
                           parameters:nil
             )
-            .responseJSON{ response in
+            .responseJSON(completionHandler: {(response: DataResponse<Any>) in
                 switch response.result {
                 case .failure(let error):
                     completion(.failure(error))
-                case .success(let value):
+                case .success( _):
                     let decoder = JSONDecoder()
                     do {
-                        let users = try decoder.decode([User].self, from: value as! Data)
+                        let users = try decoder.decode([User].self, from: response.data!)
                         completion(.success(users))
                     } catch {
                         completion(.failure(error))
                     }
                 }
-        }
+        })
     }
     
     static func getAlbums(for user: User, completion: @escaping (Result<[Album], Error>) -> Void) {
@@ -41,10 +41,10 @@ enum NetworkingManager {
                 switch response.result {
                 case .failure(let error):
                     completion(.failure(error))
-                case .success(let value):
+                case .success( _):
                     let decoder = JSONDecoder()
                     do {
-                        let albums = try decoder.decode([Album].self, from: value as! Data)
+                        let albums = try decoder.decode([Album].self, from: response.data!)
                         completion(.success(albums))
                     } catch {
                         completion(.failure(error))
@@ -60,10 +60,10 @@ enum NetworkingManager {
             )
             .responseJSON{ response in
                 switch response.result {
-                case .success(let data):
+                case .success( _):
                     let decoder = JSONDecoder()
                     do {
-                        let albums = try decoder.decode([Photo].self, from: data as! Data)
+                        let albums = try decoder.decode([Photo].self, from: response.data!)
                         completion(.success(albums))
                     } catch {
                         completion(.failure(error))
