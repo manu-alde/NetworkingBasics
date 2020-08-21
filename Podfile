@@ -6,8 +6,8 @@ target 'NetworkingBasics' do
   use_frameworks!
 
   # Pods for NetworkingBasics
-  pod 'Alamofire'
-  pod 'Kingfisher'
+  pod 'Alamofire', '~> 4.8.2'
+  pod 'Kingfisher', '~> 5.0.0'
 
   target 'NetworkingBasicsTests' do
     inherit! :search_paths

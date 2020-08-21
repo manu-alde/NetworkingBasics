@@ -4,7 +4,7 @@
 //
 //  Created by onevcat on 2018/09/28.
 //
-//  Copyright (c) 2019 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2018 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,13 +26,13 @@
 
 import Foundation
 
-extension CGFloat {
+extension Float {
     var isEven: Bool {
         return truncatingRemainder(dividingBy: 2.0) == 0
     }
 }
 
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit)
 import AppKit
 extension NSBezierPath {
     convenience init(roundedRect rect: NSRect, topLeftRadius: CGFloat, topRightRadius: CGFloat,
@@ -74,7 +74,7 @@ extension NSBezierPath {
     }
 }
 
-extension KFCrossPlatformImage {
+extension Image {
     // macOS does not support scale. This is just for code compatibility across platforms.
     convenience init?(data: Data, scale: CGFloat) {
         self.init(data: data)

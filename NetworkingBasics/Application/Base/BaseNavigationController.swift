@@ -13,7 +13,7 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
         
         navigationBar.tintColor = UIColor.white
-        navigationBar.barTintColor = UIColor.systemGreen
+        navigationBar.barTintColor = UIColor.green
         navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white,
             .font: UIFont.boldSystemFont(ofSize: 18.0)
