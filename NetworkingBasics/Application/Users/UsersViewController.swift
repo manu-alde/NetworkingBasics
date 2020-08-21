@@ -69,7 +69,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
-        let viewController = AlbumsViewController(user: user)
+        let viewController = PostsViewController(user: user)
         navigationController?.pushViewController(viewController, animated: true)
     }
     

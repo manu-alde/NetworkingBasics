@@ -72,5 +72,48 @@ enum NetworkingManager {
                     completion(.failure(error))
                 }
             }
+        
+    }
+    
+    static func getPosts(for user: User, completion: @escaping (Result<[Post], Error>) -> Void) {
+        Alamofire.request("https://jsonplaceholder.typicode.com/posts",
+                          method: .get,
+                          parameters: ["userId": user.id!]
+            )
+            .responseJSON{ response in
+                switch response.result {
+                case .failure(let error):
+                    completion(.failure(error))
+                case .success( _):
+                    let decoder = JSONDecoder()
+                    do {
+                        let posts = try decoder.decode([Post].self, from: response.data!)
+                        completion(.success(posts))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+        }
+    }
+    
+    static func getComments(for post: Post, completion: @escaping (Result<[Comment], Error>) -> Void) {
+        Alamofire.request("https://jsonplaceholder.typicode.com/comments",
+                          method: .get,
+                          parameters: ["postId": post.id!]
+            )
+            .responseJSON{ response in
+                switch response.result {
+                case .failure(let error):
+                    completion(.failure(error))
+                case .success( _):
+                    let decoder = JSONDecoder()
+                    do {
+                        let posts = try decoder.decode([Comment].self, from: response.data!)
+                        completion(.success(posts))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+        }
     }
 }

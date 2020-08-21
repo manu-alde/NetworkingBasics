@@ -10,6 +10,12 @@
 		703F8AF3E16F681111DAFA1F /* Pods_NetworkingBasicsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00D8505284813B3BA24AAC7 /* Pods_NetworkingBasicsTests.framework */; };
 		85F176583F2366237DD0032E /* Pods_NetworkingBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEFE0AD01FBB642567232C2 /* Pods_NetworkingBasics.framework */; };
 		CE5FFB7824F02D7000A51542 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FFB7724F02D7000A51542 /* Result.swift */; };
+		CE5FFB7A24F04A5C00A51542 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FFB7924F04A5C00A51542 /* Comment.swift */; };
+		CE5FFB7C24F04BB600A51542 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FFB7B24F04BB600A51542 /* Post.swift */; };
+		CE5FFB8024F04EC300A51542 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FFB7E24F04EC300A51542 /* PostTableViewCell.swift */; };
+		CE5FFB8124F04EC300A51542 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5FFB7F24F04EC300A51542 /* PostTableViewCell.xib */; };
+		CE5FFB8524F0503B00A51542 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5FFB8324F0503B00A51542 /* CommentTableViewCell.swift */; };
+		CE5FFB8624F0503B00A51542 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5FFB8424F0503B00A51542 /* CommentTableViewCell.xib */; };
 		FA2EF69224E4B31300819686 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EF69024E4B31300819686 /* UsersViewController.swift */; };
 		FA2EF69324E4B31300819686 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2EF69124E4B31300819686 /* UsersViewController.xib */; };
 		FA2EF69724E4B32A00819686 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EF69624E4B32A00819686 /* NetworkingManager.swift */; };
@@ -55,6 +61,12 @@
 		A00D8505284813B3BA24AAC7 /* Pods_NetworkingBasicsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingBasicsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB10EB74FE496F174CA14D82 /* Pods-NetworkingBasicsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingBasicsTests.release.xcconfig"; path = "Target Support Files/Pods-NetworkingBasicsTests/Pods-NetworkingBasicsTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE5FFB7724F02D7000A51542 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CE5FFB7924F04A5C00A51542 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		CE5FFB7B24F04BB600A51542 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CE5FFB7E24F04EC300A51542 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CE5FFB7F24F04EC300A51542 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CE5FFB8324F0503B00A51542 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		CE5FFB8424F0503B00A51542 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		EEEFE0AD01FBB642567232C2 /* Pods_NetworkingBasics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingBasics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2EF69024E4B31300819686 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		FA2EF69124E4B31300819686 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
@@ -128,6 +140,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE5FFB7D24F04EAF00A51542 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE5FFB7E24F04EC300A51542 /* PostTableViewCell.swift */,
+				CE5FFB7F24F04EC300A51542 /* PostTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE5FFB8224F0502F00A51542 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE5FFB8324F0503B00A51542 /* CommentTableViewCell.swift */,
+				CE5FFB8424F0503B00A51542 /* CommentTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FA2EF69424E4B31600819686 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +165,8 @@
 				FA929D9F24E4BC3900E07A88 /* Album.swift */,
 				FA929DAB24E4BF0D00E07A88 /* Photo.swift */,
 				CE5FFB7724F02D7000A51542 /* Result.swift */,
+				CE5FFB7924F04A5C00A51542 /* Comment.swift */,
+				CE5FFB7B24F04BB600A51542 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +277,7 @@
 		FA929D9024E4B8BF00E07A88 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				CE5FFB7D24F04EAF00A51542 /* Cells */,
 				FA929D9224E4B8DD00E07A88 /* PostsViewController.swift */,
 				FA929D9324E4B8DD00E07A88 /* PostsViewController.xib */,
 			);
@@ -254,6 +287,7 @@
 		FA929D9124E4B8CE00E07A88 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				CE5FFB8224F0502F00A51542 /* Cells */,
 				FA929D9624E4B8E600E07A88 /* CommentsViewController.swift */,
 				FA929D9724E4B8E600E07A88 /* CommentsViewController.xib */,
 			);
@@ -373,10 +407,12 @@
 			files = (
 				FA929D9E24E4B95400E07A88 /* UserTableViewCell.xib in Resources */,
 				FA929DAA24E4BEC400E07A88 /* PhotoCollectionViewCell.xib in Resources */,
+				CE5FFB8124F04EC300A51542 /* PostTableViewCell.xib in Resources */,
 				FA929D9924E4B8E600E07A88 /* CommentsViewController.xib in Resources */,
 				FA929D8B24E4B86A00E07A88 /* AlbumsViewController.xib in Resources */,
 				FA30E18C24E4B1D000069847 /* LaunchScreen.storyboard in Resources */,
 				FA929D9524E4B8DD00E07A88 /* PostsViewController.xib in Resources */,
+				CE5FFB8624F0503B00A51542 /* CommentTableViewCell.xib in Resources */,
 				FA929DA524E4BCDB00E07A88 /* AlbumTableViewCell.xib in Resources */,
 				FA2EF69324E4B31300819686 /* UsersViewController.xib in Resources */,
 				FA929D8F24E4B87400E07A88 /* PhotosViewController.xib in Resources */,
@@ -467,6 +503,9 @@
 				FA929D8E24E4B87400E07A88 /* PhotosViewController.swift in Sources */,
 				FA929D8A24E4B86A00E07A88 /* AlbumsViewController.swift in Sources */,
 				FA929D9824E4B8E600E07A88 /* CommentsViewController.swift in Sources */,
+				CE5FFB8024F04EC300A51542 /* PostTableViewCell.swift in Sources */,
+				CE5FFB7A24F04A5C00A51542 /* Comment.swift in Sources */,
+				CE5FFB8524F0503B00A51542 /* CommentTableViewCell.swift in Sources */,
 				FA30E18424E4B1CC00069847 /* BaseViewController.swift in Sources */,
 				FA929D9D24E4B95400E07A88 /* UserTableViewCell.swift in Sources */,
 				FA929D8524E4B6AD00E07A88 /* BaseNavigationController.swift in Sources */,
@@ -476,6 +515,7 @@
 				FA30E18024E4B1CC00069847 /* AppDelegate.swift in Sources */,
 				FA929DA924E4BEC400E07A88 /* PhotoCollectionViewCell.swift in Sources */,
 				FA929DA424E4BCDB00E07A88 /* AlbumTableViewCell.swift in Sources */,
+				CE5FFB7C24F04BB600A51542 /* Post.swift in Sources */,
 				CE5FFB7824F02D7000A51542 /* Result.swift in Sources */,
 				FA2EF69724E4B32A00819686 /* NetworkingManager.swift in Sources */,
 			);
